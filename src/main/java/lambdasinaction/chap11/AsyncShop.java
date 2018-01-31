@@ -18,24 +18,24 @@ public class AsyncShop {
     }
 
     public Future<Double> getPrice(String product) {
-/*
-        CompletableFuture<Double> futurePrice = new CompletableFuture<>();
-        new Thread( () -> {
-                    try {
-                        double price = calculatePrice(product);
-                        futurePrice.complete(price);
-                    } catch (Exception ex) {
-                        futurePrice.completeExceptionally(ex);
-                    }
-        }).start();
-        return futurePrice;
-*/
+//
+//        CompletableFuture<Double> futurePrice = new CompletableFuture<>();
+//        new Thread( () -> {
+//                    try {
+//                        double price = calculatePrice(product);
+//                        futurePrice.complete(price);
+//                    } catch (Exception ex) {
+//                        futurePrice.completeExceptionally(ex);
+//                    }
+//        }).start();
+//        return futurePrice;
+//
         return CompletableFuture.supplyAsync(() -> calculatePrice(product));
     }
 
     private double calculatePrice(String product) {
         delay();
-        if (true) throw new RuntimeException("product not available");
+//        if (true) throw new RuntimeException("product not available");
         return format(random.nextDouble() * product.charAt(0) + product.charAt(1));
     }
 

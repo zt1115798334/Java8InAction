@@ -5,7 +5,7 @@ import java.util.function.Function;
 public class Combinators {
 
     public static void main(String[] args) {
-        System.out.println(repeat(3, (Integer x) -> 2 * x).apply(10));
+        System.out.println(repeat(3, (Integer x) -> 2 * x).apply(999999999));
     }
 
     static <A, B, C> Function<A, C> compose(Function<B, C> g, Function<A, B> f) {

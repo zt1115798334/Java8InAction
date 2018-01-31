@@ -20,7 +20,7 @@ public class Ambiguous{
 
     static class C implements B, A {
         public void hello(){
-            A.super.hello();
+            B.super.hello();
         }
     }
 }

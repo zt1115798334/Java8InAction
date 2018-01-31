@@ -6,7 +6,7 @@ abstract class OnlineBanking {
         Customer c = Database.getCustomerWithId(id);
         makeCustomerHappy(c);
     }
-    abstract void makeCustomerHappy(Customer c);
+        abstract void makeCustomerHappy(Customer c);
 
 
     // dummy Customer class
